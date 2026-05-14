@@ -328,7 +328,7 @@ export default function SahleShiroBet() {
         </div>
       </section>
 
-      {/* Gallery */}
+      {/* Gallery
       <section id="gallery" className="py-12 md:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-3xl md:text-5xl font-bold text-center mb-10">Gallery</h3>
@@ -340,7 +340,7 @@ export default function SahleShiroBet() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer id="contact" className="bg-black py-12 md:py-16 px-4">

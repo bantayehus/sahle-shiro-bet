@@ -1,4 +1,5 @@
 
+// // app/page.tsx
 // 'use client';
 // import { useState, useEffect } from 'react';
 // import { Phone, Menu, X } from 'lucide-react';
@@ -45,11 +46,12 @@
 //             <a href="#contact" className="hover:text-orange-500">Contact</a>
 //           </div>
 
+//           {/* Navbar Call Button */}
 //           <a 
 //             href="tel:0941513286" 
 //             className="hidden md:flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-5 py-3 rounded-2xl font-medium text-sm"
 //           >
-//             <Phone size={18} /> Order Now 0941 513 286
+//             <Phone size={18} /> 0941 513 286
 //           </a>
 
 //           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2">
@@ -75,11 +77,7 @@
 //                 onClick={() => setSelectedItem(item)} 
 //                 className="min-w-[240px] sm:min-w-[260px] md:min-w-[300px] card cursor-pointer flex-shrink-0"
 //               >
-//                 <img 
-//                   src={item.image} 
-//                   alt={item.name} 
-//                   className="w-full h-40 sm:h-44 md:h-48 object-cover rounded-t-3xl" 
-//                 />
+//                 <img src={item.image} alt={item.name} className="w-full h-40 sm:h-44 md:h-48 object-cover rounded-t-3xl" />
 //                 <div className="p-4">
 //                   <h4 className="font-bold text-base sm:text-lg">{item.name}</h4>
 //                   <p className="text-orange-500 font-semibold">ETB {item.price}</p>
@@ -118,11 +116,7 @@
 //                 onClick={() => setSelectedItem(item)}
 //                 className="card group cursor-pointer hover:-translate-y-1 transition-all"
 //               >
-//                 <img 
-//                   src={item.image} 
-//                   alt={item.name} 
-//                   className="w-full h-48 sm:h-52 object-cover rounded-t-3xl group-hover:scale-105 transition" 
-//                 />
+//                 <img src={item.image} alt={item.name} className="w-full h-48 sm:h-52 object-cover rounded-t-3xl group-hover:scale-105 transition" />
 //                 <div className="p-5">
 //                   <h4 className="font-bold text-base sm:text-lg leading-tight">{item.name}</h4>
 //                   <p className="text-orange-500 font-semibold mt-2">ETB {item.price}</p>
@@ -134,7 +128,9 @@
 //         </div>
 //       </section>
 
+      
 
+//       {/* Footer */}
 //       <footer id="contact" className="bg-black py-12 md:py-16 px-4">
 //         <div className="max-w-7xl mx-auto text-center">
 //           <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4">Sahle Shiro Bet</h2>
@@ -144,11 +140,11 @@
 //           >
 //             📞 0941 513 286
 //           </a>
-//           <p className="text-gray-400">ayer tena, Addis Ababa • Daily 10:00 AM - 10:00 PM</p>
+//           <p className="text-gray-400">Ayer Tena, Addis Ababa • Daily 10:00 AM - 10:00 PM</p>
 //         </div>
 //       </footer>
 
-//       {/* Modal */}
+//       {/* Modal with Direct Call */}
 //       {selectedItem && (
 //         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
 //           <div className="bg-gray-900 rounded-3xl max-w-md w-full overflow-hidden relative">
@@ -181,16 +177,17 @@
 //                   Cancel
 //                 </button>
                 
-//                 <button 
-//                   onClick={() => {
-//                     alert(`✅ Thank you!\n\nPlease call 0941 513 286 to order ${selectedItem.name}`);
-//                     setSelectedItem(null);
-//                   }}
-//                   className="flex-1 py-4 bg-orange-500 hover:bg-orange-600 rounded-2xl font-bold text-lg transition"
+//                 {/* Direct Call Button */}
+//                 <a 
+//                   href="tel:0941513286"
+//                   className="flex-1 py-4 bg-orange-500 hover:bg-orange-600 rounded-2xl font-bold text-lg text-center flex items-center justify-center gap-2"
 //                 >
-//                   Order Now
-//                 </button>
+//                   <Phone size={22} />
+//                   Call to Order
+//                 </a>
 //               </div>
+
+//               <p className="text-center text-sm text-gray-400 mt-4">0941 513 286</p>
 //             </div>
 //           </div>
 //         </div>
@@ -198,6 +195,7 @@
 //     </div>
 //   );
 // }
+
 
 // app/page.tsx
 'use client';
@@ -246,7 +244,6 @@ export default function SahleShiroBet() {
             <a href="#contact" className="hover:text-orange-500">Contact</a>
           </div>
 
-          {/* Navbar Call Button */}
           <a 
             href="tel:0941513286" 
             className="hidden md:flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-5 py-3 rounded-2xl font-medium text-sm"
@@ -263,7 +260,7 @@ export default function SahleShiroBet() {
       {/* Hero */}
       <section id="home" className="pt-20 pb-12 md:pt-24 md:pb-20 text-center bg-gradient-to-br from-gray-900 to-black px-4">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">Sahle Shiro Bet</h2>
-        <p className="text-lg sm:text-xl md:text-2xl text-orange-500">Authentic Ethiopian Food</p>
+        <p className="text-lg sm:text-xl md:text-2xl text-orange-400">Authentic Ethiopian Food</p>
       </section>
 
       {/* Carousel */}
@@ -279,8 +276,8 @@ export default function SahleShiroBet() {
               >
                 <img src={item.image} alt={item.name} className="w-full h-40 sm:h-44 md:h-48 object-cover rounded-t-3xl" />
                 <div className="p-4">
-                  <h4 className="font-bold text-base sm:text-lg">{item.name}</h4>
-                  <p className="text-orange-500 font-semibold">ETB {item.price}</p>
+                  <h4 className="font-bold text-base sm:text-lg text-white">{item.name}</h4>
+                  <p className="text-orange-400 font-semibold">ETB {item.price}</p>
                 </div>
               </div>
             ))}
@@ -318,9 +315,9 @@ export default function SahleShiroBet() {
               >
                 <img src={item.image} alt={item.name} className="w-full h-48 sm:h-52 object-cover rounded-t-3xl group-hover:scale-105 transition" />
                 <div className="p-5">
-                  <h4 className="font-bold text-base sm:text-lg leading-tight">{item.name}</h4>
-                  <p className="text-orange-500 font-semibold mt-2">ETB {item.price}</p>
-                  <p className="text-sm text-gray-400 mt-2 line-clamp-2">{item.description}</p>
+                  <h4 className="font-bold text-base sm:text-lg text-white leading-tight">{item.name}</h4>
+                  <p className="text-orange-400 font-semibold mt-2">ETB {item.price}</p>
+                  <p className="text-sm text-gray-300 mt-2 line-clamp-2">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -328,19 +325,7 @@ export default function SahleShiroBet() {
         </div>
       </section>
 
-      {/* Gallery
-      <section id="gallery" className="py-12 md:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-3xl md:text-5xl font-bold text-center mb-10">Gallery</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {menuItems.map((item, i) => (
-              <div key={i} className="aspect-square overflow-hidden rounded-3xl">
-                <img src={item.image} alt={item.name} className="w-full h-full object-cover hover:scale-110 transition" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+      
 
       {/* Footer */}
       <footer id="contact" className="bg-black py-12 md:py-16 px-4">
@@ -356,7 +341,7 @@ export default function SahleShiroBet() {
         </div>
       </footer>
 
-      {/* Modal with Direct Call */}
+      {/* Modal */}
       {selectedItem && (
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
           <div className="bg-gray-900 rounded-3xl max-w-md w-full overflow-hidden relative">
@@ -367,29 +352,24 @@ export default function SahleShiroBet() {
               ✕
             </button>
 
-            <img 
-              src={selectedItem.image} 
-              alt={selectedItem.name} 
-              className="w-full h-64 sm:h-72 object-cover" 
-            />
+            <img src={selectedItem.image} alt={selectedItem.name} className="w-full h-64 sm:h-72 object-cover" />
 
             <div className="p-6 sm:p-8">
               <div className="flex justify-between items-start">
-                <h3 className="text-2xl sm:text-3xl font-bold">{selectedItem.name}</h3>
-                <p className="text-3xl sm:text-4xl font-bold text-orange-500">ETB {selectedItem.price}</p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white">{selectedItem.name}</h3>
+                <p className="text-3xl sm:text-4xl font-bold text-orange-400">ETB {selectedItem.price}</p>
               </div>
 
-              <p className="text-gray-300 mt-4 leading-relaxed">{selectedItem.description}</p>
+              <p className="text-gray-200 mt-4 leading-relaxed">{selectedItem.description}</p>
 
               <div className="flex gap-3 mt-8">
                 <button 
                   onClick={() => setSelectedItem(null)}
-                  className="flex-1 py-4 border border-gray-600 rounded-2xl font-medium"
+                  className="flex-1 py-4 border border-gray-600 rounded-2xl font-medium text-white"
                 >
                   Cancel
                 </button>
                 
-                {/* Direct Call Button */}
                 <a 
                   href="tel:0941513286"
                   className="flex-1 py-4 bg-orange-500 hover:bg-orange-600 rounded-2xl font-bold text-lg text-center flex items-center justify-center gap-2"
@@ -398,8 +378,6 @@ export default function SahleShiroBet() {
                   Call to Order
                 </a>
               </div>
-
-              <p className="text-center text-sm text-gray-400 mt-4">0941 513 286</p>
             </div>
           </div>
         </div>

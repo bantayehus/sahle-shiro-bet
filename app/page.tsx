@@ -240,7 +240,6 @@ export default function SahleShiroBet() {
           <div className="hidden md:flex gap-8 text-base">
             <a href="#home" className="hover:text-orange-500">Home</a>
             <a href="#menu" className="hover:text-orange-500">Menu</a>
-            <a href="#gallery" className="hover:text-orange-500">Gallery</a>
             <a href="#contact" className="hover:text-orange-500">Contact</a>
           </div>
 
@@ -260,7 +259,7 @@ export default function SahleShiroBet() {
       {/* Hero */}
       <section id="home" className="pt-20 pb-12 md:pt-24 md:pb-20 text-center bg-gradient-to-br from-gray-900 to-black px-4">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">Sahle Shiro Bet</h2>
-        <p className="text-lg sm:text-xl md:text-2xl text-orange-400">Authentic Ethiopian Food</p>
+        <p className="text-lg sm:text-xl md:text-2xl text-orange-400">Best Ethiopian Food</p>
       </section>
 
       {/* Carousel */}
